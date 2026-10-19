@@ -135,6 +135,7 @@ test$("vaev-style-serialize-props") {
 
     // Lists, Transforms & Visibility
     try$(testCase("list-style-position", "inside", "inside"));
+    try$(testCase("marker-side", "match-parent", "match-parent"));
     try$(testCase("transform-box", "stroke-box", "stroke-box"));
     try$(testCase("transform-box", "view-box", "view-box"));
     try$(testCase("transform-origin", "left top", "left top"));
