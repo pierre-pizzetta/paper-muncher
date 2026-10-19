@@ -18,6 +18,24 @@ test$("vaev-style-serialize-props") {
         return Ok();
     };
 
+    // Sizing, Display & Colors
+    try$(testCase("width", "auto", "auto"));
+    try$(testCase("width", "0", "0px"));
+    try$(testCase("height", "10px", "10px"));
+    try$(testCase("min-width", "auto", "auto"));
+    try$(testCase("min-height", "10%", "10%"));
+    try$(testCase("max-width", "10%", "10%"));
+    try$(testCase("max-height", "calc(10% + 40px)", "calc(10% + 40px)"));
+    try$(testCase("box-sizing", "border-box", "border-box"));
+    try$(testCase("display", "block", "block"));
+    try$(testCase("display", "contents", "contents"));
+    try$(testCase("display", "block list-item", "list-item"));
+    try$(testCase("display", "table", "table"));
+    try$(testCase("display", "inline-table", "inline-table"));
+    try$(testCase("color", "#234", "rgb(34, 51, 68)"));
+    try$(testCase("color", "hsl(120, 100%, 50%)", "rgb(0, 255, 0)"));
+    try$(testCase("background-color", "rgb(0, 0, 255)", "rgb(0, 0, 255)"));
+
     // Margin & Padding
     try$(testCase("margin-inline-start", "auto", "auto"));
     try$(testCase("margin-inline-end", "5%", "5%"));
@@ -25,6 +43,14 @@ test$("vaev-style-serialize-props") {
     try$(testCase("margin-block-end", "-10px", "-10px"));
     try$(testCase("padding-inline-start", "4px", "4px"));
     try$(testCase("padding-inline-end", "10%", "10%"));
+    try$(testCase("margin-top", "-10px", "-10px"));
+    try$(testCase("margin-right", "20%", "20%"));
+    try$(testCase("margin-bottom", "calc(2em + 3ex)", "calc(2em + 3ex)"));
+    try$(testCase("margin-left", "auto", "auto"));
+    try$(testCase("padding-top", "10px", "10px"));
+    try$(testCase("padding-right", "20%", "20%"));
+    try$(testCase("padding-bottom", "30px", "30px"));
+    try$(testCase("padding-left", "40px", "40px"));
 
     // Positioned
     try$(testCase("top", "auto", "auto"));
@@ -70,6 +96,16 @@ test$("vaev-style-serialize-props") {
     try$(testCase("outline-offset", "2px", "2px"));
     try$(testCase("outline-style", "auto", "auto"));
     try$(testCase("outline-style", "dashed", "dashed"));
+    try$(testCase("border-top-width", "0px", "0px"));
+    try$(testCase("border-right-width", "thin", "thin"));
+    try$(testCase("border-bottom-width", "5px", "5px"));
+    try$(testCase("border-left-width", "thick", "thick"));
+    try$(testCase("border-top-left-radius", "40px 0px", "40px 0px"));
+    try$(testCase("border-top-right-radius", "10px 20px", "10px 20px"));
+    try$(testCase("border-bottom-left-radius", "50% 60px", "50% 60px"));
+    try$(testCase("border-bottom-right-radius", "30px 40%", "30px 40%"));
+    try$(testCase("outline-color", "auto", "auto"));
+    try$(testCase("outline-color", "red", "rgb(255, 0, 0)"));
 
     // Baseline
     try$(testCase("line-height", "normal", "normal"));
@@ -93,6 +129,9 @@ test$("vaev-style-serialize-props") {
     try$(testCase("font-style", "oblique 10deg", "oblique 10deg"));
     try$(testCase("font-style", "oblique 10grad", "oblique 9deg"));
     try$(testCase("font-style", "oblique 0deg", "normal"));
+    try$(testCase("font-family", "Helvetica, Verdana, sans-serif", "Helvetica, Verdana, sans-serif"));
+    try$(testCase("font-size", "large", "large"));
+    try$(testCase("font-size", "20%", "20%"));
 
     // Lists, Transforms & Visibility
     try$(testCase("list-style-position", "inside", "inside"));
@@ -175,6 +214,7 @@ test$("vaev-style-serialize-special-props") {
     try$(testCase("float", "initial", "initial"));
     try$(testCase("width", "var(--size)", "var(--size)"));
     try$(testCase("float", "toggle(left, right)", "toggle(left, right)"));
+    try$(testCase("--size", "10px", "10px"));
     return Ok();
 }
 
