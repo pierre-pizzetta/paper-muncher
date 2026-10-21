@@ -47,9 +47,9 @@
             "tag": "main"
         },
         "skift/karm": {
-            "commit": "f4d9bb49cb5475851b8f9f570962e17dd8fd95fd",
+            "commit": "0c566a911cb2fd272bb60974d36ce18afce06799",
             "git": "https://github.com/pierre-pizzetta/karm.git",
-            "tag": "fix/ttf-cmap12-pdf-cids"
+            "tag": "fix/ttf-cmap12-pdf-cids-on-275745e"
         }
     }
 }
