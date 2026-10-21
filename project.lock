@@ -47,9 +47,9 @@
             "tag": "main"
         },
         "skift/karm": {
-            "commit": "275745e5fbf7ce7a7bc483a045945e3b999693d1",
-            "git": "https://codeberg.org/skift/karm.git",
-            "tag": "main"
+            "commit": "f4d9bb49cb5475851b8f9f570962e17dd8fd95fd",
+            "git": "https://github.com/pierre-pizzetta/karm.git",
+            "tag": "fix/ttf-cmap12-pdf-cids"
         }
     }
 }

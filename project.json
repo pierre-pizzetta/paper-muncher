@@ -12,8 +12,8 @@
             ]
         },
         "skift/karm": {
-            "git": "https://codeberg.org/skift/karm.git",
-            "tag": "main"
+            "git": "https://github.com/pierre-pizzetta/karm.git",
+            "tag": "fix/ttf-cmap12-pdf-cids"
         },
         "cute-engineering/cat": {
             "git": "https://codeberg.org/cute-engineering/cat.git",
